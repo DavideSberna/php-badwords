@@ -3,13 +3,12 @@
 $text = ucfirst($_GET['text']);
 $censuredText = $_GET['censured-text'];
 $lenghtText = strlen($censuredText);
-$replace = str_repeat('*', strlen($censuredText));
-// $replace = str_replace($censuredText , '***', $censuredText );
+// $replace = str_repeat('*', strlen($censuredText));
+$replace = str_replace($censuredText , '***', $censuredText );
 
  
 if((isset($text) && empty($text)) || (isset($censuredText) && empty($censuredText))){
     $error = 'Campi non validi';
-    
 } else{
     $error = 'Ecco o tuoi dati';
 };
